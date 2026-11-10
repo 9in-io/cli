@@ -78,11 +78,16 @@ Every command has `--help` with all its flags.
 
    | Project | Settings file | Redirect URL | Webhook | Adapter |
    | --- | --- | --- | --- | --- |
-   | Laravel (`9in/laravel-sdk`, `9in/laravel-server`) | `.env` | `APP_URL` + `/nine/callback` | `/nine/webhook` | `/nine` |
+   | Laravel (`9in/laravel`, `9in/laravel-server`) | `.env` | `APP_URL` + `/nine/callback` | `/nine/webhook` | `/nine` |
    | Next.js | `.env.local` | `/callback` (`/api/auth/callback/nine` with Auth.js) | `/api/webhooks/9in` | `/api/nine` |
    | Express and other Node apps (`@9in-io/node`, `@9in-io/express-server`) | `.env` | `/callback` | `/webhooks/9in` | `/nine` |
-   | Vite single-page apps | `.env.local` (`VITE_NINE_*`) | `/callback` | | |
+   | Vite single-page apps (`@9in-io/sdk`) | `.env.local` (`VITE_NINE_*`) | `/callback` | | |
    | PHP (`9in/php-sdk`) | `.env` | `/callback.php` | `/webhook.php` | `/nine` |
+
+   In Laravel projects the CLI follows `NINE_ROUTE_PREFIX`, `NINE_ADAPTER_PATH`,
+   `NINE_REDIRECT_URI` and `NINE_LOGOUT_REDIRECT_URI` from `.env`. When the callback is not the
+   SDK's default `/nine/callback`, it also writes `NINE_REDIRECT_URI`. For Node and plain PHP
+   it always writes `NINE_REDIRECT_URI`.
 
    Flags override everything: `--local-url`, `--url`, `--callback`, `--webhook-path`,
    `--adapter-path`, `--env-file`, `--name`, `--app-type`.
