@@ -79,9 +79,9 @@ Every command has `--help` with all its flags.
    | Project | Settings file | Redirect URL | Webhook | Adapter |
    | --- | --- | --- | --- | --- |
    | Laravel (`9in/laravel`, `9in/laravel-server`) | `.env` | `APP_URL` + `/nine/callback` | `/nine/webhook` | `/nine` |
-   | Next.js | `.env.local` | `/callback` (`/api/auth/callback/nine` with Auth.js) | `/api/webhooks/9in` | `/api/nine` |
-   | Express and other Node apps (`@9in-io/node`, `@9in-io/express-server`) | `.env` | `/callback` | `/webhooks/9in` | `/nine` |
-   | Vite single-page apps (`@9in-io/sdk`) | `.env.local` (`VITE_NINE_*`) | `/callback` | | |
+   | Next.js (`@9in-io/nextjs`) | `.env.local` | `/nine/callback` (`/api/auth/callback/9in` with Auth.js) | `/nine/webhook` | `/nine` |
+   | Express and other Node apps (`@9in-io/node`, `@9in-io/express-server`) | `.env` | `/nine/callback` | `/nine/webhook` | `/nine` |
+   | Vite single-page apps (`@9in-io/sdk`, `@9in-io/react`) | `.env.local` (`VITE_NINE_*`) | `/nine/callback` | | |
    | PHP (`9in/php-sdk`) | `.env` | `/callback.php` | `/webhook.php` | `/nine` |
 
    In Laravel projects the CLI follows `NINE_ROUTE_PREFIX`, `NINE_ADAPTER_PATH`,
