@@ -6,25 +6,25 @@ cask "9in" do
     end
   end
 
-  version "2.1.0"
+  version "2.2.0"
 
   on_macos do
     on_arm do
-      sha256 "c173b43ab4cb9b8404df535ad6071ce7fed1e18ad4b8b1ed920fed77d29796db"
+      sha256 "f2aba2ffb872bb8d3bd49f4474ed143dd625ca652c7ff521ca73031dc34c428a"
       url "https://github.com/9in-io/cli/releases/download/v#{version}/9in_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "20c49a958c3a823d6af2033a6903fde7eb8293ad1874b76cdd85ed2c75d13570"
+      sha256 "5de8b551da4e39595141dc355cb13544a7ff4740232a2a6fad96d9e0f26318d8"
       url "https://github.com/9in-io/cli/releases/download/v#{version}/9in_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "41f374cab2f2b691a4b14deb2ab1929d3a7bd850f42ecc1324b594e69d1eba8b"
+      sha256 "def4260f0ea46f4b5e88b0fa191c54534f6bf7d56ec786aa8a236f1176fd5c94"
       url "https://github.com/9in-io/cli/releases/download/v#{version}/9in_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "aa78394b58f157e47e1ca7034c1cb376a0e264d518e1e09a87a16d6b3b978d6e"
+      sha256 "ec14fc1d71af672df3791e1c979827874afa3e9c0332fb08d5d90d157cc9eb08"
       url "https://github.com/9in-io/cli/releases/download/v#{version}/9in_#{version}_linux_amd64.tar.gz"
     end
   end
