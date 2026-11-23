@@ -234,12 +234,6 @@ The CLI's own variables start with `NINE_CLI_`, so a shell that loaded your proj
   and keeps the last 200 requests in memory. It shows bodies and headers, including tokens.
 - **Updates** are checked against `checksums.txt` of the release before the binary is replaced.
 
-## Coming from the SSOfy dev tool
-
-The `ssofy` binary (1.x) talked to SSOfy, which no longer exists. 9in CLI 2.x replaces it:
-`ssofy listen <port> -k <key>` becomes `9in login` once, then `9in listen <port>`; API keys are
-gone. Remove the old binary and install this one.
-
 ## Support
 
 Questions and problems: [9in.io](https://9in.io).
